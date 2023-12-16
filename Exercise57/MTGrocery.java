@@ -19,7 +19,16 @@ public class MTGrocery implements IGrocery{
 	public int howMany() {
 		return 0;
 	}
+/**
+ * this is method brandName()
+ */
 	public String brandName() {
 		return "End List";
+	}
+/**
+ * this is method highestPrice()
+ */
+	public double highestPrice() {
+		return 0;
 	}
 }

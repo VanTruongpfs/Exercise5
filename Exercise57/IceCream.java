@@ -23,4 +23,5 @@ public class IceCream extends AGrocery{
 	public String toString() {
 		return "\nIceCream flavor: " + flavor + "\npackages: " + packages + ","+brandName+","+ weight + "," + price +"\n";
 }
+
 }

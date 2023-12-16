@@ -5,4 +5,5 @@ public interface IGrocery {
 	public String toString();
 	public int howMany();
 	public String brandName();
+	public double highestPrice();
 }

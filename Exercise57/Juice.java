@@ -23,5 +23,4 @@ public class Juice extends AGrocery{
 	public String toString() {
 		return "\nJuice flavor: " + flavor + "\npackages=" + packages + ","+brandName+","+ weight + "," + price +"\n";
 }
-
 }

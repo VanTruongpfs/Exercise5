@@ -24,6 +24,5 @@ public class Coffee extends AGrocery{
 		return "\nCoffee kind: " + kind + ","+brandName+","+ weight + "," + price +"\n";
 		
 }
-	
 }
 

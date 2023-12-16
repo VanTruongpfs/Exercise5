@@ -1,38 +1,32 @@
 package Exercise54;
 
-public class Person {
+public class Person {	
 	private String name;
-	private int yearOfBirth;
-	private IAncestor ancestry;
+	private int year;
+	private Person father;
+	private Person mother;
 /**
- * this is a constructor of class Person. There are 3 field
+ * this is a constructor of class Person. There are 4 field
  * @param name
- * @param yearOfBirth
- * @param ancestry
+ * @param year
+ * @param father
+ * @param mother
  * example:
- *  Information i1 = new Information("Father", 1972);
- * 	Information i2 = new Information("Mother", 1973);
- * 	Information i3 = new Information("Grandfather", 1950);
- * 	Information i4 = new Information("Grandmother", 1952);
- * 	Information i5 = new Information("Great-Grandfather", ???);
- * 	Information i6 = new Information("Great-Grandmother", ???);
- * 	
- *  MTAncestor mt = new MTAncestor();
- *  ConsAncestor c3 = new ConsAncestor(i5, i6, mt);
- *  ConsAncestor c2 = new ConsAncestor(i4, i3, c1);
- *  ConsAncestor c1 = new ConsAncestor(i2, i1, c2);
- *  
- *  new Person("Truong", 2005, c1)
+ * 	new Person("Peter", 1980, new Person("Paul", 1956, new Person(),
+  		new Person("Annie", 1938, new Person("Bob", 1917, new Person(), new Person()))),
+  			new Person("Janet", 1958, new Person("Robert", 1935, new Person(), new Person()),new Person("Angela", 1936, new Person(), new Person()));
  */
-	public Person(String name, int yearOfBirth, IAncestor ancestry) {
-		this.name = name;
-		this.yearOfBirth = yearOfBirth;
-		this.ancestry = ancestry;
+	public Person(String name) {
+		
 	}
-@Override
-public String toString() {
-	return "Person [name=" + name + ", yearOfBirth=" + yearOfBirth + ", ancestry=" + ancestry + "]";
-}
-	
-	
+	public Person(String name, int year, Person father, Person mother) {
+		this.name = name;
+		this.year = year;
+		this.father = father;
+		this.mother = mother;
+	}
+	public String toString() {
+		return  this.name + " " + this.year+ " name father : " + this.father+ " name mother : " + this.mother + "---\n";
+	}
+
 }

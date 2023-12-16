@@ -1,6 +1,6 @@
 package Exercise57;
 
-public class AGrocery{
+public abstract class AGrocery{
 	protected String brandName;
 	protected double weight;
 	protected double price;
@@ -13,7 +13,7 @@ public class AGrocery{
 	public AGrocery(String brandName, double weight, double price) {
 		this.brandName = brandName;
 		this.weight = weight;
-		price = price;
+		this.price = price;
 	}
 /**
  * this is method toString()
@@ -27,6 +27,13 @@ public class AGrocery{
  */
 	public String getBrandName() {
 		return this.brandName;
+	}
+/**
+ * this is method getPrice()
+ * @return
+ */
+	public double getPrice() {
+		return this.price;
 	}
 /**
  * this is method equals()
