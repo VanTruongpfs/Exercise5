@@ -17,6 +17,12 @@ public class Circle extends AShape {
 		super(location);
 		this.radius = radius;
 	}
+	
+@Override
+public String toString() {
+	return "Circle radius: " + radius + location + "\n";
+}
+
 /**
  * this is a method area() of class Circle
  * @return

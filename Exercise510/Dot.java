@@ -14,6 +14,14 @@ public class Dot extends AShape{
 	public Dot(CartPt location) {
 		super(location);
 	}
+	
+	
+@Override
+public String toString() {
+	return "Dot: " + location+ "\n";
+}
+
+
 /**
 * this is method area() of class Dot
 * @return

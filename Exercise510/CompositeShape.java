@@ -18,7 +18,20 @@ public class CompositeShape implements IShape{
 	public String toString() {
 		return this.top.toString()+this.bottom.toString();
 	}
+/**
+ * this is a method distanceToO()
+ */
 	public double distanceToO() {
 		return this.top.distanceToO();
+	}
+/**
+ * this is a method contains()
+ */
+	public boolean contains(CartPt Point) {
+		if( this.top.contains(Point)||this.bottom.contains(Point)) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 }

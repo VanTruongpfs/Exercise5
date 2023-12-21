@@ -26,6 +26,37 @@ class AShapeTest {
 		 new Rectangle(new CartPt(3,4),2,4);
 		 new Rectangle(new CartPt(6,8),2,3);
 		 new Rectangle(new CartPt(2,3),3,1);
+// list
+		AShape d1 = new Dot(new CartPt(3,4));
+		AShape d2 = new Dot(new CartPt(6,8));
+		AShape d3 = new Dot(new CartPt(2,3));
+		
+		AShape s1 = new Square(new CartPt(3,4),2);
+		AShape s2 = new Square(new CartPt(6,8),3);
+		AShape s3 = new Square(new CartPt(2,3),4);
+		
+		AShape c1 = new Circle(new CartPt(3,4),1);
+		AShape c2 = new Circle(new CartPt(6,8),2);
+		AShape c3 = new Circle(new CartPt(2,3),3);
+		
+		AShape r1 = new Rectangle(new CartPt(3,4),2,4);
+		AShape r2 = new Rectangle(new CartPt(6,8),2,3);
+		AShape r3 = new Rectangle(new CartPt(2,3),3,1);
+		
+			
+		 CompositeShape l1 = new CompositeShape(r3, r2);
+			CompositeShape l2 = new CompositeShape(r1, l1);
+			CompositeShape l3 = new CompositeShape(c3, l2);
+			CompositeShape l4 = new CompositeShape(c2, l3);
+			CompositeShape l5 = new CompositeShape(c1, l4);
+			CompositeShape l6 = new CompositeShape(s3, l5);
+			CompositeShape l7 = new CompositeShape(s2, l6);
+			CompositeShape l8 = new CompositeShape(s1, l7);
+			CompositeShape l9 = new CompositeShape(d3, l8);
+			CompositeShape l10 = new CompositeShape(d2, l9);
+			CompositeShape l11 = new CompositeShape(d1, l10);
+				
+				System.out.println(l11);
 	}
 /**
  * this is testing for method area()
@@ -134,6 +165,21 @@ class AShapeTest {
 				assertTrue(r1.contains(cp1));
 				assertFalse(r1.contains(cp2));
 				assertFalse(r2.contains(cp3));
+		CompositeShape l1 = new CompositeShape(r3, r2);
+		CompositeShape l2 = new CompositeShape(r1, l1);
+		CompositeShape l3 = new CompositeShape(c3, l2);
+		CompositeShape l4 = new CompositeShape(c2, l3);
+		CompositeShape l5 = new CompositeShape(c1, l4);
+		CompositeShape l6 = new CompositeShape(s3, l5);
+		CompositeShape l7 = new CompositeShape(s2, l6);
+		CompositeShape l8 = new CompositeShape(s1, l7);
+		CompositeShape l9 = new CompositeShape(d3, l8);
+		CompositeShape l10 = new CompositeShape(d2, l9);
+		CompositeShape l11 = new CompositeShape(d1, l10);
+			assertTrue(l11.contains(cp3));
+			assertTrue(l10.contains(cp2));
+			assertTrue(l9.contains(cp1));
+			System.out.println(l11.contains(cp3));
 /**
  * this is testing for method boundingBox()
  */

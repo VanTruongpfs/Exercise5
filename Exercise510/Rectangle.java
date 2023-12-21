@@ -18,6 +18,12 @@ public class Rectangle extends AShape {
 		this.width = width;
 		this.height = height;
 	}
+	
+@Override
+public String toString() {
+	return "Rectangle "+ location + "width: " + width + ", height=" + height + "\n";
+}
+
 /**
  * this is method area() of class Rectangle
  * @return

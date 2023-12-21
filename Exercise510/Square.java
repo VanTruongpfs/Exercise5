@@ -17,6 +17,12 @@ public class Square extends AShape{
 		super(location);
 		this.size = size;
 	}
+	
+@Override
+public String toString() {
+	return "Square: " + location + "size: " + size + "\n";
+}
+
 /**
  * this is a method area() of class Square
  * @return

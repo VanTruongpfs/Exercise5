@@ -21,6 +21,11 @@ public class CartPt {
 		this.y = y;
 	}
 	
+	@Override
+public String toString() {
+	return "CartPt (x: " + x + ", y: " + y+ ")";
+}
+
 	public int getX() {
 		return this.x;
  }

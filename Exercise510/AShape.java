@@ -15,6 +15,12 @@ public abstract class AShape implements IShape {
 	public AShape(CartPt location) {
 		this.location = location;
 	}
+	
+@Override
+public String toString() {
+	return "AShape location: " + location + "\n";
+}
+
 /**
  * this is method area()
  * example:
